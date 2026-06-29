@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Zahi Paradesia Ltd — Luxury Nursery Mauritius | Premium Plants</title>
+    <meta name="description" content="Zahi Paradesia Ltd is Mauritius' premier luxury nursery, offering curated indoor plants, tropical botanicals, and expert plant styling services. Elevate your space." />
+    <meta name="keywords" content="nursery mauritius, luxury plants, indoor plants, tropical botanicals, plant nursery, zahi paradesia, mauritian nursery" />
+    <link rel="canonical" href="https://zahiparadesia.mu" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Zahi Paradesia Ltd" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Zahi Paradesia Ltd Luxury Nursery",
+            "description": "Mauritius' premier luxury nursery offering curated indoor plants.",
+            "telephone": "+23057376388",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "10, Golden Road",
+                "addressLocality": "Pointe aux Sables",
+                "addressCountry": "MU"
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ── Reset & Base ── */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --green-deep: #0a2212; 
+            --green-dark: #143820;
+            --green-mid: #25663d;
+            --green-soft: #4a9e6d;
+            --green-pale: #e6f0ea;
+            --gold: #b3974d; 
+            --cream: #faf9f6; 
+            --white: #ffffff;
+            --grey: #6b7a6d;
+            --shadow-subtle: 0 10px 30px rgba(10, 34, 18, 0.04);
+            --radius: 12px; 
+            --radius-sm: 6px;
+            --transition: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--cream);
+            color: var(--green-deep);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, .serif {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ── Scrollbar ── */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--cream); }
+        ::-webkit-scrollbar-thumb { background: var(--green-soft); }
+
+        /* ── Buttons ── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.8rem;
+            border-radius: 4px;
+            font-weight: 400;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--green-deep);
+            color: var(--white);
+        }
+        .btn-primary:hover {
+            background: var(--green-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(10, 34, 18, 0.15);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            gap: 0.6rem;
+            font-weight: 500;
+            border-radius: 50px;
+        }
+        .btn-whatsapp:hover {
+            background: #1da851;
+            transform: translateY(-2px);
+        }
+
+        /* ── Navigation ── */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 1.2rem 2.5rem;
+            background: rgba(250, 249, 246, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(10, 34, 18, 0.03);
+            transition: var(--transition);
+        }
+        .navbar.scrolled {
+            padding: 0.8rem 2.5rem;
+            background: rgba(250, 249, 246, 0.95);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .nav-inner {
+            max-width: 1320px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--green-deep);
+            letter-spacing: 0.02em;
+            cursor: pointer;
+        }
+        .logo span { color: var(--gold); font-style: italic; font-weight: 400; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 3.5rem;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+        .nav-links a:hover { opacity: 1; }
+
+        .nav-cart {
+            font-size: 1.2rem;
+            cursor: pointer;
+            background: none; border: none;
+            display: flex; align-items: center; gap: 0.4rem;
+            opacity: 0.8; transition: var(--transition);
+        }
+        .nav-cart:hover { opacity: 1; transform: scale(1.05); }
+        .nav-cart .badge {
+            background: var(--gold);
+            color: white;
+            font-size: 0.6rem;
+            min-width: 18px; height: 18px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* ── Views ── */
+        .view { display: none; animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .view.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── Hero ── */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 6rem 0;
+        }
+
+        .hero-bg {
+            position: absolute; inset: 0;
+            /* Premium full-bleed imagery: Lush greenhouse nursery path loaded with green fruits and citrus trees */
+            background-image: url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center;
+            transform: scale(1.05); 
+            animation: subtleZoom 20s ease-out forwards;
+        }
+
+        @keyframes subtleZoom { to { transform: scale(1); } }
+
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: rgba(10, 34, 18, 0.55); /* Deep rich overlay gives semi-transparent effect & strong text contrast */
+            backdrop-filter: blur(2px);
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto;
+            color: var(--white);
+        }
+
+        .location-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease 0.2s both;
+        }
+
+        .hero-inner h1 {
+            font-size: 4.8rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            animation: fadeIn 1s ease 0.4s both;
+        }
+        .hero-inner h1 em {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero-inner .subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 540px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+            animation: fadeIn 1s ease 0.6s both;
+        }
+
+        /* ── Section Titles ── */
+        .section-padding { padding: 8rem 0; }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--green-deep);
+            font-weight: 400;
+        }
+        .section-title h2 em { color: var(--gold); }
+        .section-title p {
+            color: var(--grey);
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-top: 1rem;
+        }
+
+        /* ── Products ── */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 3rem;
+        }
+
+        .product-card {
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .product-card .img-wrap {
+            width: 100%;
+            aspect-ratio: 4/5; 
+            overflow: hidden;
+            background: var(--green-pale);
+            border-radius: var(--radius);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .product-card .img-wrap img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .product-card:hover .img-wrap img {
+            transform: scale(1.05);
+        }
+
+        .product-card .img-wrap::after {
+            content: 'View Details';
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 34, 18, 0.2);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .product-card:hover .img-wrap::after { opacity: 1; }
+
+        .product-info {
+            text-align: center;
+        }
+        .product-info h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+        }
+        .product-info .price {
+            font-size: 1.05rem;
+            color: var(--grey);
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 1.2rem;
+        }
+        
+        .btn-add {
+            background: transparent;
+            border: 1px solid var(--green-deep);
+            color: var(--green-deep);
+            padding: 0.8rem 2rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+        .btn-add:hover {
+            background: var(--green-deep);
+            color: var(--white);
+        }
+        .btn-add.added { background: var(--green-mid); border-color: var(--green-mid); color: white; }
+
+        /* ── Contact & Socials ── */
+        .contact { background: var(--white); border-top: 1px solid rgba(10,34,18,0.05); }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .contact-info h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+        .contact-info p {
+            color: var(--grey);
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+        }
+        
+        .contact-detail {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            display: flex; gap: 1rem; align-items: center;
+        }
+        .contact-detail strong { font-weight: 500; color: var(--green-deep); }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-top: 3rem;
+        }
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-sm);
+            background: var(--cream);
+            border: 1px solid rgba(45, 122, 79, 0.06);
+            transition: var(--transition);
+            font-weight: 500;
+            font-size: 1.05rem;
+            color: var(--green-deep);
+            position: relative;
+        }
+        .social-item:hover {
+            transform: translateX(8px);
+            border-color: var(--green-soft);
+            box-shadow: var(--shadow-subtle);
+            background: var(--white);
+        }
+        .social-item .icon-svg {
+            width: 36px; height: 36px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .social-item .icon-svg svg { width: 32px; height: 32px; transition: var(--transition); }
+        .social-item:hover .icon-svg svg { transform: scale(1.08); }
+        .social-item .brand-name { flex: 1; letter-spacing: 0.02em; }
+        .social-item .arrow { opacity: 0.3; font-size: 1.2rem; transition: var(--transition); }
+        .social-item:hover .arrow { opacity: 1; transform: translateX(4px); color: var(--green-mid); }
+
+        .map-container {
+            border-radius: var(--radius);
+            overflow: hidden;
+            height: 450px;
+            background: var(--green-pale);
+        }
+        .map-container iframe { width: 100%; height: 100%; border: none; }
+
+        /* ── Footer ── */
+        .footer {
+            background: var(--green-deep);
+            color: rgba(255, 255, 255, 0.5);
+            padding: 5rem 0 3rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        .footer .logo { color: var(--white); margin-bottom: 1rem; display: block; }
+        .footer .logo span { color: var(--gold); }
+        
+        .footer-social {
+            display: flex; justify-content: center; gap: 2rem;
+            margin: 2rem 0;
+        }
+        .footer-social a { color: white; opacity: 0.5; transition: opacity 0.3s; }
+        .footer-social a:hover { opacity: 1; }
+        .footer-social svg { width: 20px; height: 20px; fill: currentColor; }
+
+        .footer .credit {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            opacity: 0.6;
+            letter-spacing: 0.05em;
+        }
+        .footer .credit a {
+            color: var(--gold);
+            transition: var(--transition);
+        }
+        .footer .credit a:hover {
+            opacity: 1;
+            color: var(--white);
+        }
+
+        /* ── Detail View ── */
+        .detail-view { padding: 10rem 0 6rem; }
+        .back-link {
+            display: inline-block;
+            font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em;
+            color: var(--grey); margin-bottom: 3rem; cursor: pointer;
+            background: none; border: none;
+        }
+        .back-link:hover { color: var(--green-deep); }
+
+        .detail-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            aspect-ratio: 4/5;
+        }
+        .carousel-track {
+            display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+            scrollbar-width: none; 
+            height: 100%;
+        }
+        .carousel-track::-webkit-scrollbar { display: none; }
+        .slide { flex: 0 0 100%; scroll-snap-align: start; }
+        .slide img { width: 100%; height: 100%; object-fit: cover; }
+
+        .detail-info h2 { font-size: 3rem; margin-bottom: 1rem; font-weight: 400; }
+        .detail-info .detail-price { font-size: 1.5rem; color: var(--gold); margin-bottom: 2rem; }
+        .detail-info .detail-desc { color: var(--grey); margin-bottom: 3rem; font-size: 1.05rem; }
+        
+        /* ── Cart Sidebar ── */
+        .cart-overlay {
+            position: fixed; inset: 0; z-index: 2000;
+            background: rgba(10, 34, 18, 0.3); backdrop-filter: blur(5px);
+            opacity: 0; visibility: hidden; transition: var(--transition);
+        }
+        .cart-overlay.active { opacity: 1; visibility: visible; }
+
+        .cart-sidebar {
+            position: fixed; top: 0; right: 0; bottom: 0;
+            width: 480px; max-width: 100vw; z-index: 2001;
+            background: var(--white);
+            transform: translateX(100%); transition: var(--transition);
+            display: flex; flex-direction: column;
+        }
+        .cart-sidebar.open { transform: translateX(0); }
+
+        .cart-sidebar-header {
+            padding: 2.5rem; border-bottom: 1px solid rgba(10,34,18,0.05);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .cart-sidebar-header h3 { font-size: 1.5rem; font-weight: 400; }
+        .close-cart { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--grey); }
+
+        .cart-sidebar-body { flex: 1; overflow-y: auto; padding: 2.5rem; }
+        
+        .cart-item {
+            display: flex; gap: 1.5rem; margin-bottom: 2rem;
+            padding-bottom: 2rem; border-bottom: 1px solid rgba(10,34,18,0.05);
+        }
+        .cart-item img { width: 80px; height: 100px; object-fit: cover; border-radius: var(--radius-sm); }
+        .cart-item-details { flex: 1; }
+        .cart-item-details h4 { font-size: 1.1rem; margin-bottom: 0.3rem; font-weight: 500; }
+        .cart-item-details .price { color: var(--grey); font-size: 0.9rem; margin-bottom: 1rem; }
+        
+        .qty-controls { display: flex; align-items: center; gap: 1rem; }
+        .qty-controls button { background: none; border: 1px solid #ddd; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; }
+
+        .cart-sidebar-footer { padding: 2.5rem; background: var(--cream); }
+        .cart-total { display: flex; justify-content: space-between; font-size: 1.2rem; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; }
+
+        /* ── Toast ── */
+        .toast {
+            position: fixed; bottom: 2rem; right: 2rem;
+            background: var(--green-deep); color: var(--white);
+            padding: 1rem 2rem; border-radius: 4px; font-size: 0.85rem;
+            transform: translateY(100px); opacity: 0; transition: var(--transition); z-index: 3000;
+        }
+        .toast.show { transform: translateY(0); opacity: 1; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-inner h1 { font-size: 3.2rem; }
+            .detail-layout, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .section-padding { padding: 5rem 0; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a class="logo" id="logoHome">Zahi <span>Paradesia</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a id="navProducts">Collection</a></li>
+                <li><a id="navContact">Contact</a></li>
+            </ul>
+            <button class="nav-cart" id="cartIcon" aria-label="Cart">
+                Cart <span class="badge" id="navCartBadge">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="view active" id="homeView">
+        
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-inner">
+                <div class="location-tag">Mauritius — Premium Nursery</div>
+                <h1>Where nature meets <br/><em>luxury</em></h1>
+                <p class="subtitle">
+                    Curated greenery for the discerning eye. Each plant is hand-selected
+                    and nurtured to bring timeless elegance into your space.
+                </p>
+                <div class="btn-group">
+                    <a class="btn btn-primary" id="heroShopBtn">Explore Collection</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="productsSection">
+            <div class="container">
+                <div class="section-title">
+                    <h2>The <em>Collection</em></h2>
+                    <p>Botanicals for the modern home</p>
+                </div>
+                <div class="product-grid" id="productGrid"></div>
+            </div>
+        </section>
+
+        <section class="contact section-padding" id="contactSection">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Private <em>Consultations</em></h3>
+                        <p>Whether you're looking for the perfect statement plant or require expert styling advice for your estate, our specialists are at your service.</p>
+                        
+                        <div class="contact-detail">
+                            <strong>Visit</strong> 10 Golden Road, Pointe aux Sables, MU
+                        </div>
+                        <div class="contact-detail">
+                            <strong>Call</strong> <a href="tel:+23057376388">+230 5737 6388</a>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=100063763872663" class="social-item" target="_blank">
+                                <span class="icon-svg">
+                                    <svg viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                </span>
+                                <span class="brand-name">Follow us on Facebook</span>
+                                <span class="arrow">→</span>
+                            </a>
+
+                            <a href="https://wa.me/23057376388" class="social-item" target="_blank">
+                                <span class="icon-svg">
+                                    <svg viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                    </svg>
+                                </span>
+                                <span class="brand-name">Message us on WhatsApp</span>
+                                <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15098.123456789!2d57.4590!3d-20.1680!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c5b8c1a2b3c4d%3A0x1234567890abcdef!2sPointe%20aux%20Sables%2C%20Mauritius!5e0!3m2!1sen!2smu!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="logo">Zahi <span>Paradesia</span></div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=100063763872663" target="_blank" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/23057376388" target="_blank" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p>© 2026 Zahi Paradesia Ltd. Curated botanicals.</p>
+                <div class="credit">
+                    created by <a href="https://www.facebook.com/profile.php?id=61591242190352" target="_blank">Abyan Coan-Dulloo</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="view" id="detailView">
+        <section class="detail-view container">
+            <button class="back-link" id="detailBackBtn">← Back to Collection</button>
+            <div class="detail-layout">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack"></div>
+                </div>
+                <div class="detail-info">
+                    <h2 id="detailName">Product Name</h2>
+                    <div class="detail-price" id="detailPrice">Rs 0.00</div>
+                    <p class="detail-desc" id="detailDesc">Description</p>
+                    <button class="btn btn-primary" id="detailAddBtn" style="width: 100%;">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar-header">
+            <h3 class="serif">Your Cart</h3>
+            <button class="close-cart" id="closeCartBtn">✕</button>
+        </div>
+        <div class="cart-sidebar-body" id="cartSidebarBody"></div>
+        <div class="cart-sidebar-footer" id="cartSidebarFooter">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="sidebarTotal">Rs 0.00</span>
+            </div>
+            <button class="btn btn-whatsapp" id="sidebarCheckoutBtn" style="width:100%;">
+                Checkout via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">Added to cart</div>
+
+    <script>
+        const products = [{
+            id: 1,
+            name: 'Banana Plant',
+            price: 1250,
+            description: 'A lush, tropical banana plant with large, paddle-shaped leaves. Brings an instant exotic feel to any room. Thrives in bright, indirect light and high humidity.',
+            images: [
+                'banana1.jpg',
+                'banana2.jpg',
+                'banana3.jpg'
+            ]
+        }, {
+            id: 2,
+            name: 'Cherry Plant',
+            price: 980,
+            description: 'A delightful flowering cherry plant that produces delicate pink blossoms. Perfect for adding a touch of spring to your interior. Prefers cool, bright spots.',
+            images: [
+                'cerise1.jpg',
+                'cerise2.jpg'
+            ]
+        }, {
+            id: 3,
+            name: 'Mango Plant',
+            price: 2100,
+            description: 'A stunning dwarf mango tree with glossy, evergreen foliage. Though it rarely fruits indoors, its lush canopy makes a bold statement. Loves warmth and bright light.',
+            images: [
+                'mango1.jpg',
+                'mango2.jpg'
+            ]
+        }];
+
+        let cart = [];
+        let currentProduct = null;
+
+        // Routing & UI Elements
+        const showView = (id) => {
+            document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        document.getElementById('logoHome').onclick = () => showView('homeView');
+        document.getElementById('detailBackBtn').onclick = () => showView('homeView');
+        document.getElementById('navProducts').onclick = () => { showView('homeView'); document.getElementById('productsSection').scrollIntoView(); };
+        document.getElementById('navContact').onclick = () => { showView('homeView'); document.getElementById('contactSection').scrollIntoView(); };
+        document.getElementById('heroShopBtn').onclick = () => document.getElementById('productsSection').scrollIntoView();
+
+        // Render Products
+        document.getElementById('productGrid').innerHTML = products.map((p) => `
+            <div class="product-card" onclick="openDetail(${p.id})">
+                <div class="img-wrap"><img src="${p.images[0]}" alt="${p.name}" loading="lazy"/></div>
+                <div class="product-info">
+                    <h3 class="serif">${p.name}</h3>
+                    <div class="price">Rs ${p.price.toFixed(2)}</div>
+                    <button class="btn-add" onclick="event.stopPropagation(); addCart(${p.id})">Add to Cart</button>
+                </div>
+            </div>
+        `).join('');
+
+        window.openDetail = (id) => {
+            const p = products.find(x => x.id === id);
+            currentProduct = p;
+            document.getElementById('carouselTrack').innerHTML = p.images.map(img => `<div class="slide"><img src="${img}"/></div>`).join('');
+            document.getElementById('detailName').textContent = p.name;
+            document.getElementById('detailPrice').textContent = `Rs ${p.price.toFixed(2)}`;
+            document.getElementById('detailDesc').textContent = p.description;
+            showView('detailView');
+        };
+
+        document.getElementById('detailAddBtn').onclick = () => currentProduct && addCart(currentProduct.id);
+
+        // Cart Logic
+        const updateCartUI = () => {
+            document.getElementById('navCartBadge').textContent = cart.reduce((s, c) => s + c.qty, 0);
+            
+            if(cart.length === 0) {
+                document.getElementById('cartSidebarBody').innerHTML = '<p style="color:#888; text-align:center; margin-top:2rem;">Your cart is empty.</p>';
+                document.getElementById('sidebarCheckoutBtn').style.display = 'none';
+                document.getElementById('sidebarTotal').textContent = 'Rs 0.00';
+                return;
+            }
+
+            document.getElementById('sidebarCheckoutBtn').style.display = 'flex';
+            document.getElementById('cartSidebarBody').innerHTML = cart.map(c => `
+                <div class="cart-item">
+                    <img src="${c.images[0]}"/>
+                    <div class="cart-item-details">
+                        <h4 class="serif">${c.name}</h4>
+                        <div class="price">Rs ${(c.price * c.qty).toFixed(2)}</div>
+                        <div class="qty-controls">
+                            <button onclick="changeQty(${c.id}, -1)">-</button>
+                            <span>${c.qty}</span>
+                            <button onclick="changeQty(${c.id}, 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            document.getElementById('sidebarTotal').textContent = 'Rs ' + cart.reduce((s, c) => s + (c.price * c.qty), 0).toFixed(2);
+        };
+
+        window.addCart = (id) => {
+            const p = products.find(x => x.id === id);
+            const ex = cart.find(x => x.id === id);
+            if(ex) ex.qty++; else cart.push({...p, qty: 1});
+            updateCartUI();
+            showToast('Added to cart');
+            openSidebar();
+        };
+
+        window.changeQty = (id, delta) => {
+            const item = cart.find(x => x.id === id);
+            if(item) {
+                item.qty += delta;
+                if(item.qty <= 0) cart = cart.filter(x => x.id !== id);
+                updateCartUI();
+            }
+        };
+
+        // Sidebar & Toast
+        const openSidebar = () => { document.getElementById('cartSidebar').classList.add('open'); document.getElementById('cartOverlay').classList.add('active'); };
+        const closeSidebar = () => { document.getElementById('cartSidebar').classList.remove('open'); document.getElementById('cartOverlay').classList.remove('active'); };
+        
+        document.getElementById('cartIcon').onclick = openSidebar;
+        document.getElementById('closeCartBtn').onclick = closeSidebar;
+        document.getElementById('cartOverlay').onclick = closeSidebar;
+
+        const showToast = (msg) => {
+            const t = document.getElementById('toast');
+            t.textContent = msg; t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 2500);
+        };
+
+        // Checkout
+        document.getElementById('sidebarCheckoutBtn').onclick = () => {
+            let msg = '🌿 *Zahi Paradesia - Order*\n\n';
+            cart.forEach(c => msg += `${c.name} x ${c.qty} - Rs ${(c.price * c.qty)}\n`);
+            msg += `\n*Total: Rs ${cart.reduce((s, c) => s + (c.price * c.qty), 0)}*`;
+            window.open(`https://wa.me/23057376388?text=${encodeURIComponent(msg)}`, '_blank');
+        };
+
+        // Scroll FX
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Init
+        updateCartUI();
+    </script>
+</body>
+</html>
